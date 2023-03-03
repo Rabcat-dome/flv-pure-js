@@ -11,3 +11,11 @@ https://platform-open-api.waylar.net/api/v1/tms/live/0071010A05@1/event/1234?mut
 ตัวที่เจ้าของ Project แจ้งว่าน่าจะมีปัญหา เช่น
 https://github.com/winshining/nginx-http-flv-module
 https://www.yanxurui.cc/posts/server/2017-11-25-http-flv/
+
+
+1.npm install --save flv.js
+2.npm install -g ts-node@latest
+3.npm install --save-dev typescript@latest
+
+
+2.npm run build:debug

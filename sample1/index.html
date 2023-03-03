@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <title>flv.js demo</title>
+    <link rel="stylesheet" type="text/css" href="demo.css" />
+</head>
+
+<body>
+    <!-- <div class="controls"></div>
+        <button onclick="flv_start()">Start</button>
+    </div> -->
+    <script src="dist/flv.min.js"></script>
+<video id="videoElement" muted="muted"></video>
+<script>
+    if (flvjs.isSupported()) {
+        var videoElement = document.getElementById('videoElement');
+        var flvPlayer = flvjs.createPlayer({
+            type: 'flv',
+            url: 'https://platform-open-api.waylar.net/api/v1/tms/live/0071010A05@1/event/1234?mute=1'
+        });
+        flvPlayer.attachMediaElement(videoElement);
+        flvPlayer.load();
+
+        // ถ้าต้องการให้ทำปุ่มแยกก็มา Comment อันนี้
+        flvPlayer.play();
+    }
+
+    function flv_start() {
+        flvPlayer.play();
+        }
+</script>
+    
+</body>
+
+</html>
